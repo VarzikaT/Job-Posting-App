@@ -4,21 +4,17 @@ import joblogo from '../images/joblogo.png';
 import jobposter from '../images/jobposter.jpeg';
 
 function Homepage() {
+
+    const logout = () => {
+        sessionStorage.clear();
+        window.location.href = "/";
+    }
+
   return (
     <div>
         <div>
            
-        <nav class="navbar">
-        <div>
-            <p style={{backgroundColor:'#303F60',height:'55px', width:'55px', paddingTop:'15px', paddingLeft:'25px'}}>My<span class='jobsword'>Jobs</span></p>
-            </div>
-            <div>
-                <p></p>
-            </div>
-            <div class="login-button">
-                <button className='login'>Login/Signup</button>
-            </div>
-        </nav>  
+         
         <div>
             
         </div>
