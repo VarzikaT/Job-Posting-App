@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import AllJobs from "../../Components/AllJobs/AllJobs";
+import PostAjob from "../PostAJob/PostAjob";
 
 const Home = () => {
   return (
-    <div>This is Home</div>
-  )
-}
+    <Routes>
+    </Routes>
+  );
+};
 
-export default Home
+export default Home;

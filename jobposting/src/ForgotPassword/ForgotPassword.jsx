@@ -1,18 +1,12 @@
 import React from 'react';
-import '../ForgotPassword/ForgotPassword.css';
+import './ForgotPassword.css';
 
 function ForgotPassword() {
   return (
-    <div>
-         <nav>
-            <div class='navbar'>
-            <div>
-            <p style={{backgroundColor:'#303F60',height:'55px', width:'55px', paddingTop:'15px', paddingLeft:'35px'}}>My<span class='jobsword'>Jobs</span></p>
-            </div>
-            </div>
-        </nav>
-        <div className='div1'>
-            <div class='password-box'>
+    <div className='forgot-password-wrapper'>
+        
+        <div className='div1-forgotpassword'>
+            <div class='password-box-forgotpassword'>
                 <h4 style={{backgroundColor:'#ffffff', marginLeft:'15px', marginTop:'10px'}}>Forgot your password?</h4>
                 &nbsp;&nbsp;
                 <p style={{backgroundColor:'#ffffff', marginLeft:'15px'}}>Enter the email associated with your account and we’ll send you instructions to reset your password.</p>
@@ -26,9 +20,9 @@ function ForgotPassword() {
                 <button style={{backgroundColor:' #43AFFF', color:'aliceblue', height:'42px', width:'105px',border:'0.5px solid #43AFFF', borderRadius:'5px', marginTop:'15px', marginLeft:'180px' }}>Submit</button>
                  </div>
         </div>
-        <div className='div2'>
-
-        </div>
+        {/* <div className='div2'>
+ksjhfkjsf
+        </div> */}
     </div>
   )
 }

@@ -12,13 +12,7 @@ function Homepage() {
 
   return (
     <div>
-        <div>
-           
-         
-        <div>
-            
-        </div>
-        </div>
+
         
         <div class="posterarea">
             <div className='job-text'>

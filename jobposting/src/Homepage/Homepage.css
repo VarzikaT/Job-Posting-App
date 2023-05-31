@@ -8,7 +8,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color:#EDF6FF;
+    /* background-color:#EDF6FF; */
     /* width: 100vw;
     height: 100vh; */
 }
@@ -34,7 +34,8 @@
 .job-text{
     width:50%;
     /* border:5px solid yellow; */
-    font-size: 35px;
+    text-align: center;
+    font-size: 40px;
     color: aliceblue;
     background-color: #303F60;
     margin-top: 80px;
@@ -51,7 +52,7 @@
 }
 
 .posterimg{
-    margin-top: 50px;
+    margin-top: 53px;
     margin-left: 200px;
     height: 210px;
     width:300px;
@@ -68,6 +69,7 @@
 
 .card-area{
     display: flex;
+    justify-content: space-evenly ;
     width: 100vw;
     height:200px;
     /* border:3px solid red; */

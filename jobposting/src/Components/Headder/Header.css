@@ -1,6 +1,6 @@
 .navbar{
     background-color:#303F60;
-    /* border: 2px solid red; */
+ /* border: 2px solid green; */
     height: 55px;
     width: 100vw;
     /* box-sizing: border-box; */
@@ -24,8 +24,8 @@
     background-color: #303F60;
     border-radius: 5px;
     height: 0px;
-    margin-left: 1200px;
-    margin-top: 10px;
+    /* margin-left: 1200px; */
+    /* margin-top: 10px; */
     /* border: 0px;
     border-bottom: 0.2px rgb(52, 190, 245); */
 }
@@ -35,6 +35,46 @@
     height: 35px;
     color: aliceblue;
     width: 100px;
+    margin-top: 10px;
     border:0px;
     background-color: #1c88d6;
+    margin-left: 12px;
+}
+
+.div-nav-element{
+    display: flex;
+    height: 55px;
+    width: 300px;
+    margin-left: 1080px;
+   background-color: #303F60;
+    /* border: 4px solid red; */
+    justify-content:center
+    
+}
+
+.name-box-initial{
+    width: 50px;
+    height: 48px;
+    margin-top: 5px;
+    border: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 25px;
+    background-color: #D9EFFF;
+    color: gray;
+}
+
+.post-job-link{
+    color: white;
+    margin-right: 15px;
+    font-size: 16px;
+    background-color: #303F60;
+    justify-content: center;
+    margin-top: 15px;
+   text-decoration: none;
+}
+
+.login-btn-navbar{
+    background-color: #303F60;
+    margin-left: 1250px;
 }

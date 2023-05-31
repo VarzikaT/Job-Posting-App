@@ -7,6 +7,11 @@ import Homepage from "./Homepage/Homepage";
 import Home from "./Screens/Home/Home";
 import { useState } from "react";
 import Header from "./Components/Headder/Header";
+import AllJobs from "./Components/AllJobs/AllJobs";
+import PostAjob from "./Screens/PostAJob/PostAjob";
+import Modal from "./Components/modal/Modal";
+import ForgotPassword from "./ForgotPassword/ForgotPassword";
+import PasswordReset from "./PasswordReset/PasswordReset";
 
 function App() {
   const [isAuthorized, setIsAuthorized] = useState(
@@ -22,6 +27,12 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route exact path="/alljobs" element={<AllJobs />} />
+        <Route exact path="/postjob" element={<PostAjob />} />
+        <Route exact path="/postjobmodal" element={<Modal/>} />
+        <Route exact path="/registeruser" element={<Registerpage/>} />
+        <Route exact path="/forgotpassword" element={<ForgotPassword/>} />
+        <Route exact path="/passwordreset" element={<PasswordReset/>} />
         <Route
           path="/login"
           element={
@@ -33,6 +44,7 @@ function App() {
           }
         />
         <Route
+          exact
           path="/home"
           element={isAuthorized ? <Home /> : <Navigate to={"/login"} />}
         />

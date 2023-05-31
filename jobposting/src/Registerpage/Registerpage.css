@@ -2,12 +2,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color:#EDF6FF;
+    /* background-color:#EDF6FF; */
     /* width: 100vw;
     height: 100vh; */
 }
 
-.div1{
+.div1-registerpage{
     width: 100vw;
     height: 300px;
     border: 0.1px solid ;
@@ -24,30 +24,92 @@
     background-color: #EDF6FF;
 }
 
-.login-form{
+.register-form{
     display: flex;
     flex-direction: column;
     text-align: left;
-    height: 460px;
-    margin-top: 40px;
+    height: 550px;
+    margin-top: 30px;
     margin-left: 530px;
-    width: 440px;
+    width: 480px;
     background-color: #FFFFFF;
     border: 1px solid rgb(190, 185, 185);
-    padding: 5px;
-    border-radius: 5px;
+    padding: 18px;
+    border-radius: 15px;
+    box-shadow: #557DA526 0px 30px 36px;
 }
 .email-text{
     color: black;
     padding-bottom: 10px;
 }
 
+.inputfield-registerpage{
+    height: 35px;
+    border: 0.8px solid #C6C6C6;
+    background-color: #E8E8E833;
+    border-radius: 5px;
+    width: auto;
+    color: "";
+    margin-top: 10px;
+    padding: 10px 5px;
+}
+
 .submit-button{
     background-color: #43AFFF;
+    color: aliceblue;
+    height: 52px;
+    width: 105px;
+    border: 0.5px solid #43AFFF;
     border-radius: 5px;
+    margin-top: 15px;
+    margin-left: 150px;
+}
+
+.button-container{
+    display: flex;
+}
+
+.profile-buttons-registerpage-recruiter{
+    background-color: #43AFFF;
+    color: #FFFFFF;
+    height: 35px;
+    width: 120px;
+    border-radius: 8px;
+    border: 1px solid #43AFFF;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    margin-left: 140px;
-    border: none;
-    height: 40px;
-    width:100px;
+}
+
+.profile-buttons-registerpage-candidate{
+    background-color: #E8E8E833;
+   text-align: center;
+    color: black;
+    height: 35px;
+    width: 120px;
+    border-radius: 8px;
+    border: 1px solid #C6C6C6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills-registerpage{
+    height: 35px;
+    border: 0.8px solid #C6C6C6;
+    background-color: #E8E8E833;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px 5px;
+
+}
+
+.passwordfields-registerpage{
+    height: 35px;
+    margin-top: 10px;
+    border: 0.8px solid #C6C6C6;
+    background-color: #E8E8E833;
+    width: 200px;
+    border-radius: 5px;
+    padding: 10px 5px;
 }

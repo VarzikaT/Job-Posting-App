@@ -1,0 +1,40 @@
+.textbox{
+    height: 170px;
+    width: 300px;
+    background-color: #FFFFFF;
+}
+
+.textbox-AllJobs{
+    display: flex;
+    direction: column;
+    flex-wrap: wrap;
+    background-color: rgba(red, green, blue, 0.1);
+    padding: 0px 160px ;
+    /* position: absolute; */
+    /* position: relative; */
+    /* top: -50px; */
+}
+
+
+.text{
+    padding: 2px;
+    font-size: 15px;
+    background-color: #FFFFFF;
+}
+
+.div2-AllJobs{
+    background-color: #303F60;
+    height: 130px;
+    width: 100%;
+    padding: 0px 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.textbox{
+    min-width:50px ;
+    max-width: 300px;
+
+}
