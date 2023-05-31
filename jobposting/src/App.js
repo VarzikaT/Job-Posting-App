@@ -27,17 +27,19 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route exact path="/alljobs" element={<AllJobs />} />
-        <Route exact path="/postjob" element={<PostAjob />} />
-        <Route exact path="/postjobmodal" element={<Modal/>} />
-        <Route exact path="/registeruser" element={<Registerpage/>} />
-        <Route exact path="/forgotpassword" element={<ForgotPassword/>} />
-        <Route exact path="/passwordreset" element={<PasswordReset/>} />
+        <Route exact path="/forgotpassword" element={<ForgotPassword />} />
+
+        {/* <Route exact path="/alljobs" element={<AllJobs />} />
+        <Route exact path="/postjob" element={<Modal />} />
+        <Route exact path="/postjobmodal" element={<Modal />} />
+        <Route exact path="/registeruser" element={<Registerpage />} />
+        <Route exact path="/forgotpassword" element={<ForgotPassword />} />
+        <Route exact path="/passwordreset" element={<PasswordReset />} /> */}
         <Route
           path="/login"
           element={
             isAuthorized ? (
-              <Navigate to={"/home"} />
+              <Navigate to={"/"} />
             ) : (
               <Loginpage setIsAuthorized={setIsAuthorized} />
             )
@@ -45,8 +47,40 @@ function App() {
         />
         <Route
           exact
-          path="/home"
-          element={isAuthorized ? <Home /> : <Navigate to={"/login"} />}
+          path="/"
+          element={isAuthorized ? <Homepage /> : <Navigate to={"/login"} />}
+        />
+
+        <Route
+          exact
+          path="/alljobs"
+          element={isAuthorized ? <AllJobs /> : <Navigate to={"/login"} />}
+        />
+
+        <Route
+          exact
+          path="/postjob"
+          element={isAuthorized ? <Modal /> : <Navigate to={"/login"} />}
+        />
+        <Route
+          exact
+          path="/registeruser"
+          element={isAuthorized ? <Registerpage /> : <Navigate to={"/login"} />}
+        />
+        <Route
+          exact
+          path="/passwordreset"
+          element={
+            isAuthorized ? <PasswordReset /> : <Navigate to={"/login"} />
+          }
+        />
+
+        <Route
+          exact
+          path="/*"
+          element={
+            isAuthorized ? <h1> Not Found</h1> : <Navigate to={"/login"} />
+          }
         />
       </Routes>
     </div>

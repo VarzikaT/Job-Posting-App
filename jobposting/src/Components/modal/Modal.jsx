@@ -41,64 +41,45 @@ function Modal() {
   };
 
   return (
-    <div>
+    <div className="modal-wrapper" >
+      <div className="div1-modal">
       <div className="modal-form">
         <form>
           <h3>Post a job</h3>
           <br></br>
-          <label>Title</label>
+          <label>Job Title*</label>
           <br></br>
           <input
             type={Text}
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            style={{
-              marginTop: "10px",
-              backgroundColor: "lightgrey",
-              borderRadius: "3px",
-              border: "0.8px solid grey",
-              height: "26px",
-              width: "380px",
-            }}
+            className="modal-inputs"
           ></input>
           <br></br>
           <br></br>
           <label>
-           Description
+           Description*
           </label>
           <br></br>
 
-          <input
+          <textarea
             type={Text}
             value={description}
             onChange={(e) => setDescription(e.target.value)}
-            style={{
-              backgroundColor: "lightgrey",
-              borderRadius: "3px",
-              marginTop: "10px",
-              border: "0.8px solid grey",
-              height: "26px",
-              width: "380px",
-            }}
-          ></input>
+            className="modal-inputs"
+            style={{height:"60px"}}
+          ></textarea>
           <br></br>
           <br></br>
           <label>
-           Location
+           Location*
           </label>
           <br></br>
           <input
             type={Text}
             value={location}
             onChange={(e) => setlocation(e.target.value)}
-            style={{
-              backgroundColor: "lightgrey",
-              borderRadius: "3px",
-              marginTop: "10px",
-              border: "0.8px solid grey",
-              height: "26px",
-              width: "380px",
-            }}
+            className="modal-inputs"
           ></input>
           <br></br>
 
@@ -108,6 +89,7 @@ function Modal() {
           <br></br>
           
         </form>
+      </div>
       </div>
     </div>
   );

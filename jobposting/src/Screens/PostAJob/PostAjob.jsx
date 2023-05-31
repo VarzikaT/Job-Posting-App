@@ -10,7 +10,7 @@ const PostAjob = () => {
 
   return (
     <>
-      {/* <div className="postajob-wrapper">
+      <div className="postajob-wrapper">
         <div className="div2-AllJobs">
           <h3 style={{ backgroundColor: "#303F60", color: "white" }}>
             Jobs posted By you
@@ -18,7 +18,7 @@ const PostAjob = () => {
         </div>
         <div className="div-postjob">
           <div className="div-clipboard-icon">
-            <LuClipboardEdit className="" />
+            <LuClipboardEdit style={{color:"gray", height:"40px", width:"50px"}} />
           </div>
           <p style={{ fontSize: "20px", color: "gray" }}>
             Your posted jobs will show here!
@@ -30,8 +30,8 @@ const PostAjob = () => {
             Post a Job
           </button>
         </div>
-      </div> */}
-      <Modal />
+      </div>
+      {/* <Modal /> */}
     </>
   );
 };
