@@ -62,11 +62,7 @@ function App() {
           path="/postjob"
           element={isAuthorized ? <Modal /> : <Navigate to={"/login"} />}
         />
-        <Route
-          exact
-          path="/registeruser"
-          element={isAuthorized ? <Registerpage /> : <Navigate to={"/login"} />}
-        />
+        <Route exact path="/registeruser" element={<Registerpage />} />
         <Route
           exact
           path="/passwordreset"

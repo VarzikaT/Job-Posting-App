@@ -2,6 +2,7 @@ import React from 'react';
 import './Homepage.css';
 import joblogo from '../images/joblogo.png';
 import jobposter from '../images/jobposter.jpeg';
+import { Link } from 'react-router-dom';
 
 function Homepage() {
 
@@ -18,7 +19,7 @@ function Homepage() {
             <div className='job-text'>
                 <p style={{backgroundColor:'#303F60'}}>Welcome to </p>
                 <p style={{backgroundColor:'#303F60'}}>My<span class='jobsword'>Jobs</span></p>
-                <button className='get-started'>Get Started</button>
+                <Link to="/alljobs" className='get-started' style={{textDecoration:"none", fontSize:"20px", padding:"7px 12px"}}>Get Started</Link>
                 {/* <div class="why-us">
                 <p>Why Us?</p>
             </div> */}
