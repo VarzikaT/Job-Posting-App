@@ -11,7 +11,7 @@ function Homepage() {
     }
 
   return (
-    <div>
+    <div class="homepage-wrapper">
 
         
         <div class="posterarea">
