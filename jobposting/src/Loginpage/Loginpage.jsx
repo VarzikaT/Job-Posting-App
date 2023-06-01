@@ -10,7 +10,7 @@ function Loginpage({ setIsAuthorized }) {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    alert("Clicked login");
+    // alert("Clicked login");
 
     console.log("login ", email, password);
 

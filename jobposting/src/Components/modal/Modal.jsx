@@ -32,7 +32,7 @@ function Modal() {
       .request(config)
       .then((response) => {
         console.log(response);
-        // navigate("/")
+        navigate("/alljobs")
       })
       .catch((error) => {
         console.log(error);
