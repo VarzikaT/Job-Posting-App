@@ -4,9 +4,15 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { CiLocationOn } from "react-icons/ci";
 import "./AllJobs.css";
+import Candidate from "../../Screens/Candidates/Candidate";
 
 function AllJobs() {
   const [value, setvalue] = useState([]);
+
+  const [showModal, setshowModal] = useState(false);
+  const [modalData, setModalData] = useState(false);
+
+  const [jobId, setJobId] = useState(null);
 
   useEffect(() => {
     const user = JSON.parse(sessionStorage.getItem("user"));
@@ -31,57 +37,80 @@ function AllJobs() {
       });
   }, []);
 
-  return (
-    <div className="all-jobs-wrapper">
-      {/* <Header/> */}
-      <div className="div2-AllJobs">
-        <h3 style={{ backgroundColor: "#303F60", color: "white" }}>
-          Jobs posted By you
-        </h3>
-      </div>
-      <div className="textbox-AllJobs">
-        {value &&
-          value.map((user) => (
-            <div className="textbox">
-              <div className="text-container">
+  const toggleModal = (job) => {
+    console.log(job);
+    setJobId(job.id);
+    setshowModal(!showModal);
+  };
 
-              <span style={{ fontSize: "17px", backgroundColor: "#FFFFFF" }}>
-                <p style={{ backgroundColor: "#FFFFFF" }}>{user.title}</p>
-              </span>
-              <span style={{fontSize:'12px'}}>{user.description}</span>
-              </div>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  marginTop: "20px",
-                  backgroundColor: "#FFFFFF",
-                }}
-              >
-                <span className="text">
-                  <CiLocationOn
-                    style={{ color: "#43AFFF", height: "30px", width: "30px" }}
-                  />
-                  {user.location}
-                </span>
-                <button
+  return (
+    <>
+      <div className="all-jobs-wrapper">
+        {/* <Header/> */}
+        <div className="div2-AllJobs">
+          <h3 style={{ backgroundColor: "#303F60", color: "white" }}>
+            Jobs posted By you
+          </h3>
+        </div>
+        <div className="textbox-AllJobs">
+          {value &&
+            value.map((user) => (
+              <div className="textbox">
+                <div className="text-container">
+                  <span
+                    style={{ fontSize: "17px", backgroundColor: "#FFFFFF" }}
+                  >
+                    <p style={{ backgroundColor: "#FFFFFF" }}>{user.title}</p>
+                  </span>
+                  <span style={{ fontSize: "12px" }}>{user.description}</span>
+                </div>
+                <div
                   style={{
-                    backgroundColor: "#43AFFF33",
-                    borderRadius: "4px",
-                    border: "none",
-                    minWidth: "100px",
-                    fontSize: "13px",
-                    padding : "3px 10px"
+                    display: "flex",
+                    justifyContent: "space-between",
+                    marginTop: "20px",
+                    backgroundColor: "#FFFFFF",
                   }}
                 >
-                  View Applications
-                </button>
+                  <span className="text">
+                    <CiLocationOn
+                      style={{
+                        color: "#43AFFF",
+                        height: "30px",
+                        width: "30px",
+                      }}
+                    />
+                    {user.location}
+                  </span>
+                  <button
+                    style={{
+                      backgroundColor: "#43AFFF33",
+                      borderRadius: "4px",
+                      border: "none",
+                      minWidth: "100px",
+                      fontSize: "13px",
+                      padding: "3px 10px",
+                    }}
+                    onClick={() => toggleModal(user)}
+                  >
+                    View Applications
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+        </div>
+
+        <div className="last-div"></div>
       </div>
-      <div className="last-div"></div>
-    </div>
+
+      {showModal ? (
+        <Candidate
+          data={"This is dummy data"}
+          jobId={jobId}
+          closePopup={toggleModal}
+        />
+      ) : null}
+    </>
   );
 }
 

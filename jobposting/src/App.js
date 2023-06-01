@@ -12,6 +12,7 @@ import PostAjob from "./Screens/PostAJob/PostAjob";
 import Modal from "./Components/modal/Modal";
 import ForgotPassword from "./ForgotPassword/ForgotPassword";
 import PasswordReset from "./PasswordReset/PasswordReset";
+import Candidate from "./Screens/Candidates/Candidate";
 
 function App() {
   const [isAuthorized, setIsAuthorized] = useState(
@@ -35,6 +36,10 @@ function App() {
         <Route exact path="/registeruser" element={<Registerpage />} />
         <Route exact path="/forgotpassword" element={<ForgotPassword />} />
         <Route exact path="/passwordreset" element={<PasswordReset />} /> */}
+
+        {/* <Route exact path="/alljobs" element={<AllJobs />} /> */}
+        <Route exact path="/candidate" element={<Candidate />} />
+
         <Route
           path="/login"
           element={

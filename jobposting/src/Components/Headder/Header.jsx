@@ -32,7 +32,7 @@ const Header = () => {
             My<span class="jobsword">Jobs</span>
           </p>
         </div>
-        <div></div>
+        {/* <div></div> */}
 
         <div class="login-button">
           {isAuthorized ? (
@@ -40,16 +40,18 @@ const Header = () => {
               <Link to={"/postjob"} className="post-job-link">
                 <p> post a job</p>
               </Link>
-              <button className="name-box-initial">{data && data.name.slice(0, 1)}</button>
+              <button className="name-box-initial">
+                {data && data.name.slice(0, 1)}
+              </button>
               <button className="login" onClick={logout}>
                 Logout
               </button>
             </div>
           ) : (
             <div className="login-btn-navbar">
-            <Link to={"/login"} style={{backgroundColor:"#303F60"}}>
-              <button className="login">Login/Signup</button>
-            </Link>
+              <Link to={"/login"} style={{ backgroundColor: "#303F60" }}>
+                <button className="login">Login/Signup</button>
+              </Link>
             </div>
           )}
         </div>

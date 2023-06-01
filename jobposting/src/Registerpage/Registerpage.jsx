@@ -4,6 +4,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import {MdOutlineGroups2} from "react-icons/md";
 import {MdOutlinePersonOutline} from "react-icons/md";
+import { Link, useNavigate } from "react-router-dom";
 
 function Registerpage() {
   const [fullname, setfullname] = useState("");
@@ -12,11 +13,22 @@ function Registerpage() {
   const [confirmpassword, setconfirmpassword] = useState("");
   const [skills, setskills] = useState("");
 
+  const navigate = useNavigate();
+
   const handlesignup = (e) => {
     e.preventDefault();
-    alert("Clicked Submit");
-
+    // alert("Clicked Submit");
     console.log("signup", fullname, email, password, confirmpassword, skills);
+
+    if( !fullname || !email || !password || !confirmpassword ){
+      alert("Please fill all the required fields")
+      return;
+    }
+
+    if(password !== confirmpassword){
+      alert("passwords do not match");
+      return;
+    }
 
     const config = {
       method: "POST",
@@ -37,9 +49,14 @@ function Registerpage() {
     axios(config)
       .then(function (response) {
         console.log("response", response.data);
+        if(response.data.data){
+          navigate("/login");
+        }
       })
       .catch(function (error) {
         console.log("error", error);
+        alert("some error occured!!")
+        // alert(error);
       })
       .finally(() => {});
   };

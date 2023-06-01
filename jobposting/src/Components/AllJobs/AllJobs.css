@@ -1,53 +1,47 @@
-.textbox{
-    height: 170px;
-    width: 300px;
-    background-color: #EDF6FF;
-    padding: 10px;
+.textbox {
+  height: 170px;
+  width: 300px;
+  background-color: #edf6ff;
+  padding: 10px;
 }
 
-.all-jobs-wrapper{
-    height: 80vh;
+.all-jobs-wrapper {
+  height: 80vh;
 }
-.textbox-AllJobs{
-    display: flex;
-    direction: column;
-    flex-wrap: wrap;
-    background-color: rgba(red, green, blue, 0.1);
-    /* border: 2px solid red; */
-    background-color: #EDF6FF;
-    padding: 0px 160px ;
-    /* position: absolute; */
-    /* position: relative; */
-    /* top: -50px; */
-    height: 100%;
+.textbox-AllJobs {
+  display: flex;
+  direction: column;
+  flex-wrap: wrap;
+  background-color: rgba(red, green, blue, 0.1);
+  background-color: #edf6ff;
+  padding: 0px 160px;
+  height: 100%;
 }
 
-
-.text{
-    padding: 2px;
-    font-size: 15px;
-    background-color: #FFFFFF;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.text {
+  padding: 2px;
+  font-size: 15px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.text-container{
-    padding: 10px;
+.text-container {
+  padding: 10px;
 }
-.div2-AllJobs{
-    background-color: #303F60;
-    height: 130px;
-    width: 100%;
-    padding: 0px 180px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.div2-AllJobs {
+  background-color: #303f60;
+  height: 130px;
+  width: 100%;
+  padding: 0px 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-
-.textbox{
-    min-width:50px ;
-    max-width: 300px;
-    background-color: #FFFFFF;
-    border-radius: 15px;
+.textbox {
+  min-width: 50px;
+  max-width: 300px;
+  background-color: #ffffff;
+  border-radius: 15px;
 }
