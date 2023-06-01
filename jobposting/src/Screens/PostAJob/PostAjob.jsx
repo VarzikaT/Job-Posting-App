@@ -18,7 +18,9 @@ const PostAjob = () => {
         </div>
         <div className="div-postjob">
           <div className="div-clipboard-icon">
-            <LuClipboardEdit style={{color:"gray", height:"40px", width:"50px"}} />
+            <LuClipboardEdit
+              style={{ color: "gray", height: "40px", width: "50px" }}
+            />
           </div>
           <p style={{ fontSize: "20px", color: "gray" }}>
             Your posted jobs will show here!

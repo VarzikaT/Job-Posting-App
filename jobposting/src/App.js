@@ -4,7 +4,7 @@ import Loginpage from "./Loginpage/Loginpage";
 import Registerpage from "./Registerpage/Registerpage";
 import { Navigate, redirect, Route, Routes } from "react-router-dom";
 import Homepage from "./Homepage/Homepage";
-import Home from "./Screens/Home/Home";
+
 import { useState } from "react";
 import Header from "./Components/Headder/Header";
 import AllJobs from "./Components/AllJobs/AllJobs";
@@ -38,7 +38,7 @@ function App() {
         <Route exact path="/passwordreset" element={<PasswordReset />} /> */}
 
         {/* <Route exact path="/alljobs" element={<AllJobs />} /> */}
-        <Route exact path="/candidate" element={<Candidate />} />
+        {/* <Route exact path="/candidate" element={<Candidate />} /> */}
 
         <Route
           path="/login"
